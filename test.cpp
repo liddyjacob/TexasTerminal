@@ -10,6 +10,21 @@ namespace TexasTerminal{
     Card c(Five, Clubs);
     assert(c == Card(Five, Clubs));
   }
+  
+  void equalityTest(){
+    Card c1(Seven, Hearts);
+
+    Card c2(Ace, Spades);
+
+    Card c3(Ace, Diamonds);
+
+    Card c4(Seven, Hearts);
+
+    assert(c1 == c4);
+
+    assert(c2 != c3);
+
+  }
 
 
 
@@ -22,10 +37,15 @@ int main(){
 */
   TexasTerminal::test1();
 
-  {
+
+  TexasTerminal::equalityTest();
 
 
-  }
+//  TexasTerminal::uniqueTest();
+  
+
+
+  
 
 }
 

@@ -33,9 +33,12 @@ namespace TexasTerminal{
         :rank(r), suit(s)
       { }
 
-      bool operator==(Card){return true;}
+      bool operator==(Card c){ return (rank == c.rank && 
+                                       suit == c.suit );}
+      bool operator!=(Card c){ return !(*this == c); }
 
-
+      
+      
     Rank rank;
     Suit suit;
 

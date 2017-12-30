@@ -23,6 +23,21 @@ namespace TexasTerminal{
     assert(c1 == c4);
 
     assert(c2 != c3);
+  }
+
+  void deckBuild(){
+
+    std::vector<Card> deck;
+  
+    for(int s = Hearts; s <= Clubs; ++s){
+      for(int r = Two; r <= Ace; ++r){
+        Card c(static_cast<Rank>(r),static_cast<Suit>(s));
+        deck.push_back(c);
+      }
+    }
+
+    assert(deck.size() == 52);
+
 
   }
 

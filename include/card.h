@@ -2,7 +2,6 @@
 
 namespace TexasTerminal{
 
-
   enum Rank{
     Two,
     Three,
@@ -26,7 +25,6 @@ namespace TexasTerminal{
     Clubs
   };
 
-
   class Card{
     public:
       Card(Rank r, Suit s)
@@ -35,16 +33,12 @@ namespace TexasTerminal{
 
       bool operator==(Card c){ return (rank == c.rank && 
                                        suit == c.suit );}
-      bool operator!=(Card c){ return !(*this == c); }
 
-      
+      bool operator!=(Card c){ return !(*this == c); }      
       
     Rank rank;
     Suit suit;
-
-
   };
-
 
 
 
